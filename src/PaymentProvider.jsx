@@ -1,5 +1,5 @@
 import React from "react";
-import { useReactFlow } from "reactflow";
+import { Handle, useReactFlow } from "reactflow";
 
 function PaymentProvider({ data: { name, code }, id }) {
   const { setNodes } = useReactFlow();
@@ -12,6 +12,7 @@ function PaymentProvider({ data: { name, code }, id }) {
       <h1>{name}</h1>
       <h3>{code}</h3>
       <button onClick={handelCLick} className="bg-red-300  border-2 border-gray-500 ">X</button>
+      <Handle type="target" position="left"/>
     </div>
   );
 }
